@@ -1,0 +1,29 @@
+<h2>Catálogo de Cuentas</h2>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Tipo</th>
+    <th>Código</th>
+    <th>Nivel</th>
+    <th>Descripción</th>
+  </tr>
+  <tr *ngFor="let cuenta of cuentas">
+    <td>{{ cuenta.id }}</td>
+    <td>{{ cuenta.nombre }}</td>
+    <td>{{ cuenta.tipo }}</td>
+    <td>{{ cuenta.codigo }}</td>
+    <td>{{ cuenta.nivel }}</td>
+    <td>{{ cuenta.descripcion }}</td>
+  </tr>
+</table>
+
+<h3>Nueva Cuenta</h3>
+<form [formGroup]="cuentaForm" (ngSubmit)="crear()">
+  <input formControlName="nombre" placeholder="Nombre" />
+  <input formControlName="tipo" placeholder="Tipo" />
+  <input formControlName="codigo" placeholder="Código" />
+  <input formControlName="nivel" type="number" placeholder="Nivel" />
+  <input formControlName="descripcion" placeholder="Descripción" />
+  <button type="submit">Crear</button>
+</form>

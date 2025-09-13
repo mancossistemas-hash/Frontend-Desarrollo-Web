@@ -1,0 +1,19 @@
+<h2>Proveedores</h2>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Dirección</th>
+    <th>Teléfono</th>
+    <th>Email</th>
+    <th>Saldo Pendiente</th>
+  </tr>
+  <tr *ngFor="let proveedor of proveedores">
+    <td>{{ proveedor.id }}</td>
+    <td>{{ proveedor.nombre }}</td>
+    <td>{{ proveedor.direccion }}</td>
+    <td>{{ proveedor.telefono }}</td>
+    <td>{{ proveedor.email }}</td>
+    <td>{{ proveedor.saldo_pendiente }}</td>
+  </tr>
+</table>
