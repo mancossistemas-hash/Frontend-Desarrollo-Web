@@ -1,0 +1,22 @@
+<h2>Clientes</h2>
+<table *ngIf="clientes.length; else noData">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Dirección</th>
+      <th>Teléfono</th>
+      <th>Email</th>
+      <th>Saldo Pendiente</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of clientes">
+      <td>{{ c.nombre }}</td>
+      <td>{{ c.direccion }}</td>
+      <td>{{ c.telefono }}</td>
+      <td>{{ c.email }}</td>
+      <td>{{ c.saldo_pendiente }}</td>
+    </tr>
+  </tbody>
+</table>
+<ng-template #noData>No hay clientes registrados.</ng-template>

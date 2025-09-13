@@ -1,0 +1,6 @@
+<h2>Balance General</h2>
+<form [formGroup]="form" (ngSubmit)="generar()">
+  <label>Inicio: <input type="date" formControlName="inicio" /></label>
+  <label>Fin: <input type="date" formControlName="fin" /></label>
+  <button type="submit">Generar PDF</button>
+</form>

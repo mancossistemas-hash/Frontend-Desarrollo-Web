@@ -1,0 +1,10 @@
+<h2>Registrar Transacción</h2>
+<form [formGroup]="form" (ngSubmit)="registrar()">
+  <input formControlName="tipo_transaccion" placeholder="Tipo" />
+  <input formControlName="monto" type="number" placeholder="Monto" />
+  <input formControlName="descripcion" placeholder="Descripción" />
+  <input formControlName="debe" type="number" placeholder="Debe" />
+  <input formControlName="haber" type="number" placeholder="Haber" />
+  <button type="submit">Guardar</button>
+</form>
+<div *ngIf="error" style="color:red">{{ error }}</div>
